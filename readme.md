@@ -26,7 +26,7 @@ The project aims to create a powerful and scalable API that supports all essenti
 
 ## Features
 
-### 1. [User Registration and Authentication](docs/User Registration and Authentication.md)
+### 1. [User Registration and Authentication](docs/User-Registration-and-Authentication.md)
 
 - **Sign Up:** Users create an account with username, email, and password. Email verification confirms the account.
 - **Login:** Registered users log in with email and password. Multi-factor authentication (MFA) is supported.
