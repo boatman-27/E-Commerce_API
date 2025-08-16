@@ -80,7 +80,7 @@ func SetupRouter(router *gin.Engine, db *sqlx.DB) {
 
 		// checkout routes
 		protected.GET("/summary", checkoutController.OrderSummary)
-		protected.GET("/confirm", checkoutController.ConfrimPurchase)
+		protected.POST("/confirm", checkoutController.ConfrimPurchase)
 
 		// order routes
 		protected.GET("/orders/status", orderController.TrackOrder)
@@ -100,7 +100,7 @@ func SetupRouter(router *gin.Engine, db *sqlx.DB) {
 		protected.POST("/wishlists/item/move-to-cart", wishlistController.MoveItemToCart)
 		protected.PATCH("/wishlists", wishlistController.EditWishlist)
 		protected.DELETE("/wishlists", wishlistController.DeleteWishlist)
-		protected.DELETE("/wishlist-item", wishlistController.DeleteWishlistItem)
+		protected.DELETE("/wishlist/item", wishlistController.DeleteWishlistItem)
 
 	}
 
@@ -115,7 +115,7 @@ func SetupRouter(router *gin.Engine, db *sqlx.DB) {
 		// vendor routes
 		vendor.GET("/products/id", vendorController.GetProductById)
 		vendor.POST("/products", vendorController.AddProduct)
-		vendor.POST("/products", vendorController.DeleteProduct)
-		vendor.PATCH("/products", vendorController.Updateproduct)
+		vendor.POST("/products/id", vendorController.DeleteProduct)
+		vendor.PATCH("/products", vendorController.UpdateProduct)
 	}
 }

@@ -199,7 +199,7 @@ type Review struct {
 
 // === === === === ===
 //
-//	=== Reviews ===
+//	=== Wishlists ===
 //
 // === === === === ===
 

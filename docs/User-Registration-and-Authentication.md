@@ -1,3 +1,5 @@
+# User Registration and Authentication
+
 ### Overview
 
 This code defines a user authentication and profile management system using the Go programming language, Gin web framework, and PostgreSQL (via sqlx). It is split into two main files:
@@ -215,4 +217,99 @@ CREATE TABLE users (
   createdat TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
   updatedat TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
 );
+```
+
+## Example JSON
+
+### Login Request
+
+```JSON
+{
+	"email": "example@email.com",
+	"password": "1234BOB%"
+}
+```
+
+### Login Response
+
+```json
+{
+  "token": "eyJjbGllbnRfaWQiOiJZekV6TUdkb01ISm5PSEJpT0cxaWJEaHlOVEE9IiwicmVzcG9uc2VfdHlwZSI6ImNvZGUiLCJzY29wZSI6ImludHJvc2NwZWN0X3Rva2VucywgcmV2b2tlX3Rva2VucyIsImlzcyI6ImJqaElSak0xY1hwYWEyMXpkV3RJU25wNmVqbE1iazQ0YlRsTlpqazNkWEU9Iiwic3ViIjoiWXpFek1HZG9NSEpuT0hCaU9HMWliRGh5TlRBPSIsImF1ZCI6Imh0dHBzOi8vbG9jYWxob3N0Ojg0NDMve3RpZH0ve2FpZH0vb2F1dGgyL2F1dGhvcml6ZSIsImp0aSI6IjE1MTYyMzkwMjIiLCJleHAiOiIyMDIxLTA1LTE3VDA3OjA5OjQ4LjAwMCswNTQ1In0",
+  "user": {
+    "userId": "dc22872c-f003-40df-b61a-743c97945b33",
+    "name": "Adham Osman",
+    "email": "example@email.com",
+    "phoneNumber": "+96812345678",
+    "verified": true
+  }
+}
+```
+
+### Register Request
+
+```json
+{
+  "name": "John Doe",
+  "email": "example@gmail.com",
+  "password": "1234BOB8",
+  "phoneNumber": "+9681245678",
+  "role": "vendor" // if not set then automates to user
+}
+```
+
+### Register Response
+
+```json
+{
+  "message": "Verification email sent. Please check your inbox."
+}
+```
+
+### Verify Request
+
+- #### IN params: `verificationToken`
+
+### Verify Response
+
+```json
+{
+  "message": "User Verified"
+}
+```
+
+### Update User Request
+
+```json
+{
+  "name": "Adham Osman",
+  "phoneNumber": "+96877778889"
+}
+```
+
+### Update User Response
+
+```json
+{
+  "user": {
+    "userId": "dc22872c-f003-40df-b61a-743c97945b33",
+    "name": "Adham Osman",
+    "email": "adham4603@gmail.com",
+    "phoneNumber": "+96877778889",
+    "verified": true
+  }
+}
+```
+
+### Get Profile Response
+
+```json
+{
+  "user": {
+    "userId": "dc22872c-f003-40df-b61a-743c97945b33",
+    "name": "Adham Osman",
+    "email": "adham4603@gmail.com",
+    "phoneNumber": "+96877778889",
+    "verified": true
+  }
+}
 ```

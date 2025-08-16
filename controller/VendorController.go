@@ -125,7 +125,7 @@ func (vc *VendorController) DeleteProduct(c *gin.Context) {
 	c.JSON(http.StatusOK, gin.H{"message": "Product deleted successfully"})
 }
 
-func (vc *VendorController) Updateproduct(c *gin.Context) {
+func (vc *VendorController) UpdateProduct(c *gin.Context) {
 	var updatedProduct models.Product
 	if err := c.ShouldBindJSON(&updatedProduct); err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
