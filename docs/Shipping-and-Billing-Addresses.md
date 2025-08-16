@@ -1,4 +1,4 @@
-# # Shipping & Billing Addresses
+# Shipping & Billing Addresses
 
 ### Overview
 
