@@ -89,11 +89,11 @@ go run .
 - **Sign Up:** Users create an account with username, email, and password. Email verification confirms the account.
 - **Login:** Registered users log in with email and password. Multi-factor authentication (MFA) is supported.
 
-### 2. [Shipping & Billing Addresses](docs/User-Registration-and-Authentication.md)
+### 2. [Shipping & Billing Addresses](docs/Shipping-and-Billing-Addresses.md)
 
 - **Manage Addresses**: Users can add, edit, and delete shipping and billing addresses. This ensures that users have up-to-date information for order deliveries.
 
-### 3. [Vendor Processes](docs/vendor-Processes.md)
+### 3. [Vendor Processes](docs/Vendor-Processes.md)
 
 - **Add Product**: Vendors can create new products with details like name, price, stock, and category, which are stored in the database with ownership linked to their vendor ID.
 - **Manage Products**: Vendors can view, update, or delete their products, with validations ensuring only the owner can modify or remove them.
@@ -103,7 +103,7 @@ go run .
 - **Product Listing**: Users can browse a catalog of products categorized by type, brand, or other criteria. Each product listing includes images, descriptions, prices, and availability status.
 - **Search Products**: Users can quickly find what they need by searching for products using keywords, filters, and sorting options.
 
-### 5. [Cart Management System](docs/Cart-Management-System-md)
+### 5. [Cart Management System](docs/Cart-Management-System.md)
 
 - **Add to Cart**: Users can add products to their shopping cart, specify quantities, and choose product options.
 - **View and Edit Cart**: Users can view the contents of their cart, update quantities, and remove items.
